@@ -2,8 +2,8 @@ import openpyxl
 from datetime import datetime
 
 
-string_date_work_before_cft = 'Дата начала работы по ИБ(без ЦФТ)'
-string_date_work_in_the_cft = 'Дата начала работы по ИБ(в ЦФТ)'
+string_date_work_before_cft = 'Дата начала работы по ИБ(без )'
+string_date_work_in_the_cft = 'Дата начала работы по ИБ(в )'
 
 class TimeOver:
     def __init__(self, path):
