@@ -26,17 +26,17 @@ class TimeOver:
 
     def calculating_the_length_of_service(self):
         for idx in range(len(self.workers['Имя'])):
-            if self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx] != None:
-                if type(self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx]) == datetime:
-                    date_work_before_cft = self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx]
+            if self.workers['Дата начала работы по ИБ(без )'][idx] != None:
+                if type(self.workers['Дата начала работы по ИБ(без )'][idx]) == datetime:
+                    date_work_before_cft = self.workers['Дата начала работы по ИБ(без )'][idx]
                 else:
-                    date_work_before_cft = (datetime.strptime(self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx], '%d.%m.%Y')).date()
+                    date_work_before_cft = (datetime.strptime(self.workers['Дата начала работы по ИБ(без )'][idx], '%d.%m.%Y')).date()
             else:
                 date_work_before_cft = None
-            if type(self.workers['Дата начала работы по ИБ(в ЦФТ)'][idx]) == datetime:
-                date_work_in_the_cft = self.workers['Дата начала работы по ИБ(в ЦФТ)'][idx]
+            if type(self.workers['Дата начала работы по ИБ(в )'][idx]) == datetime:
+                date_work_in_the_cft = self.workers['Дата начала работы по ИБ(в )'][idx]
             else:
-                date_work_in_the_cft = (datetime.strptime(self.workers['Дата начала работы по ИБ(в ЦФТ)'][idx], '%d.%m.%Y')).date()
+                date_work_in_the_cft = (datetime.strptime(self.workers['Дата начала работы по ИБ(в )'][idx], '%d.%m.%Y')).date()
             if date_work_before_cft == None:
                 delta_date_work_in_the_cft_and_now = self.date_now - date_work_in_the_cft
                 years = ((delta_date_work_in_the_cft_and_now.days) // 365)
@@ -183,8 +183,8 @@ class TimeOver:
         sheet['B1'] = 'Фамилия'
         sheet['C1'] = 'Должность'
         sheet['D1'] = 'Отдел'
-        sheet['E1'] = 'Дата начала работы по ИБ(без ЦФТ)'
-        sheet['F1'] = 'Дата начала работы по ИБ(в ЦФТ)'
+        sheet['E1'] = 'Дата начала работы по ИБ(без )'
+        sheet['F1'] = 'Дата начала работы по ИБ(в )'
         sheet['G1'] = 'Опыт работы'
         sheet['H1'] = 'Увольнение'
         sheet.freeze_panes = 'A2'  
@@ -196,15 +196,15 @@ class TimeOver:
         wb = openpyxl.load_workbook(f'{self.path}\\учет данных.xlsx')
         sheet = wb['учет']
         for idx in range(len(self.workers['Имя'])):
-            if type(self.workers['Дата начала работы по ИБ(в ЦФТ)'][idx]) == datetime:
-                date_work_in_the_cft = self.workers['Дата начала работы по ИБ(в ЦФТ)'][idx]
+            if type(self.workers['Дата начала работы по ИБ(в )'][idx]) == datetime:
+                date_work_in_the_cft = self.workers['Дата начала работы по ИБ(в )'][idx]
             else:
-                date_work_in_the_cft = (self.workers['Дата начала работы по ИБ(в ЦФТ)'][idx]).strftime('%d.%m.%Y')
-            if self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx] != None:
-                if type(self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx]) == datetime:
-                    date_work_before_cft = self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx]
+                date_work_in_the_cft = (self.workers['Дата начала работы по ИБ(в )'][idx]).strftime('%d.%m.%Y')
+            if self.workers['Дата начала работы по ИБ(без )'][idx] != None:
+                if type(self.workers['Дата начала работы по ИБ(без )'][idx]) == datetime:
+                    date_work_before_cft = self.workers['Дата начала работы по ИБ(без )'][idx]
                 else:
-                    date_work_before_cft = (self.workers['Дата начала работы по ИБ(без ЦФТ)'][idx]).strftime('%d.%m.%Y')
+                    date_work_before_cft = (self.workers['Дата начала работы по ИБ(без )'][idx]).strftime('%d.%m.%Y')
             else:
                 date_work_before_cft = None
             params = [
