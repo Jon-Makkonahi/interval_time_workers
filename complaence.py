@@ -51,130 +51,256 @@ class TimeOver:
                 years = (delta_date_work_in_the_cft_and_now.days + delta_date_work_before_cft_and_date_work_in_the_cft.days) // 365
                 months = ((delta_date_work_in_the_cft_and_now.days + delta_date_work_before_cft_and_date_work_in_the_cft.days) % 365) // 30
                 days = ((delta_date_work_in_the_cft_and_now.days + delta_date_work_before_cft_and_date_work_in_the_cft.days) % 365) % 30
-            if 1 < (years) % 10 <= 4:
-                if 1 < months <= 4:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} года, {months} месяца, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяца, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяца, {days} день'
+            if years % 100 <= 20:
+                if 10 <= years % 100 <= 20:
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дней'
                         else:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяца, {days} дней'
-                elif months == 1:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} года, {months} месяц, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяц, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяц, {days} день'
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дней'
                         else:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяц, {days} дней'
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дней'
+                    else:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дней'
+                elif 1 < (years) % 10 <= 4:
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} дней'
+                    else:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} дней'
+                elif (years) % 10 < 1:
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{months} месяца, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяца,{days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{months} месяц, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяц, {days} дней'
+                    else:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{months} месяцев, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{months} месяцев, {days} дней'
+                elif (years) % 10 == 1:
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} дней'
+                        else:   
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} дней'
+                    else:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} дней'
+                        else:                   
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} дней'
                 else:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} года, {months} месяцев, {days} дней'
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дней'
                     else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяцев, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяцев, {days} день'
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дней'
                         else:
-                            self.workers['Опыт работы'][idx] = f'{years} года, {months} месяцев, {days} дней'
-            elif (years) % 10 < 1:
-                if 1 < months <= 4:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{months} месяца, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{months} месяца, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{months} месяца, {days} день'
-                        else:
-                            self.workers['Опыт работы'][idx] = f'{months} месяца,{days} дней'
-                elif months == 1:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{months} месяц, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{months} месяц, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{months} месяц, {days} день'
-                        else:
-                            self.workers['Опыт работы'][idx] = f'{months} месяц, {days} дней'
-                else:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{months} месяцев, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{months} месяцев, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{months} месяцев, {days} день'
-                        else:
-                            self.workers['Опыт работы'][idx] = f'{months} месяцев, {days} дней'
-            elif (years) % 10 == 1:
-                if 1 < months <= 4:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} год, {months} месяца, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяца, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяца, {days} день'
-                        else:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяца, {days} дней'
-                elif months == 1:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} год, {months} месяц, {days} дней'
-                    else:   
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяц, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяц, {days} день'
-                        else:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяц, {days} дней'
-                else:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} год, {months} месяцев, {days} дней'
-                    else:                   
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяцев, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяцев, {days} день'
-                        else:
-                            self.workers['Опыт работы'][idx] = f'{years} год, {months} месяцев, {days} дней'
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дней'
             else:
-                if 1 < months <= 4:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяца, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяца, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяца, {days} день'
+                if 1 < (years) % 10 <= 4:
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} дней'
                         else:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяца, {days} дней'
-                elif months == 1:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяц, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяц, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяц, {days} день'
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяца, {days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} дней'
                         else:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяц, {days} дней'
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяц, {days} дней'
+                    else:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} года, {months} месяцев, {days} дней'
+                elif (years) % 10 == 1:
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяца, {days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} дней'
+                        else:   
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяц, {days} дней'
+                    else:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} дней'
+                        else:                   
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} год, {months} месяцев, {days} дней'
                 else:
-                    if 10 <= days % 100 <= 20:
-                        self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяцев, {days} дней'
-                    else:
-                        if 1 < (days) % 10 <= 4:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяцев, {days} дня'
-                        elif (days) % 10 == 1:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяцев, {days} день'
+                    if 1 < months <= 4:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дней'
                         else:
-                            self.workers['Опыт работы'][idx] = f'{years} лет, {months} месяцев, {days} дней'
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяца, {days} дней'
+                    elif months == 1:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяц, {days} дней'
+                    else:
+                        if 10 <= days % 100 <= 20:
+                            self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дней'
+                        else:
+                            if 1 < (days) % 10 <= 4:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дня'
+                            elif (days) % 10 == 1:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} день'
+                            else:
+                                self.workers['Стаж по ИБ'][idx] = f'{years} лет, {months} месяцев, {days} дней'
 
 
     def writer_on_the_sheet(self, sheet, params):
